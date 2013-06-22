@@ -20,13 +20,13 @@
     </define>
     <verbose-stacktraces>true</verbose-stacktraces>
     <source-path append="true">
-      <path-element>C:\archive\flash\blender_away3d</path-element>
+      <path-element>C:\archive\flash\blender_away3d_demo</path-element>
       <path-element>C:\archive\flash\src</path-element>
       <path-element>C:\Program Files (x86)\FlashDevelop\Library\AS3\classes</path-element>
     </source-path>
   </compiler>
   <file-specs>
-    <path-element>C:\archive\flash\blender_away3d\Intermediate_ColladaAnimation.as</path-element>
+    <path-element>C:\archive\flash\blender_away3d_demo\Intermediate_ColladaAnimation.as</path-element>
   </file-specs>
   <default-background-color>#C0C0C0</default-background-color>
   <default-frame-rate>30</default-frame-rate>

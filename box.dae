@@ -5,8 +5,8 @@
       <author>Blender User</author>
       <authoring_tool>Blender 2.67.0 r57141</authoring_tool>
     </contributor>
-    <created>2013-06-22T10:26:06</created>
-    <modified>2013-06-22T10:26:06</modified>
+    <created>2013-06-22T14:02:51</created>
+    <modified>2013-06-22T14:02:51</modified>
     <unit name="meter" meter="1"/>
     <up_axis>Z_UP</up_axis>
   </asset>
@@ -172,386 +172,74 @@
     </geometry>
   </library_geometries>
   <library_animations>
-    <animation id="BoxArmatureNode_BoxBone_pose_matrix">
-      <source id="BoxArmatureNode_BoxBone_pose_matrix-input">
-        <float_array id="BoxArmatureNode_BoxBone_pose_matrix-input-array" count="2">0 2.5</float_array>
+    <animation id="Armature_Bone_pose_matrix">
+      <source id="Armature_Bone_pose_matrix-input">
+        <float_array id="Armature_Bone_pose_matrix-input-array" count="4">0 3.266667 6.666666 10.06667</float_array>
         <technique_common>
-          <accessor source="#BoxArmatureNode_BoxBone_pose_matrix-input-array" count="2" stride="1">
+          <accessor source="#Armature_Bone_pose_matrix-input-array" count="4" stride="1">
             <param name="TIME" type="float"/>
           </accessor>
         </technique_common>
       </source>
-      <source id="BoxArmatureNode_BoxBone_pose_matrix-output">
-        <float_array id="BoxArmatureNode_BoxBone_pose_matrix-output-array" count="32">1 0 0 0 0 7.54979e-8 -1 0 0 1 7.54979e-8 0 0 0 0 1 1 0 0 0 0 7.54979e-8 -1 0 0 1 7.54979e-8 0 0 0 0 1</float_array>
+      <source id="Armature_Bone_pose_matrix-output">
+        <float_array id="Armature_Bone_pose_matrix-output-array" count="64">1 0 0 0 0 7.54979e-8 -1 0 0 1 7.54979e-8 0 0 0 0 1 1 0 0 -8 0 7.54979e-8 -1 8 0 1 7.54979e-8 -8.000001 0 0 0 1 1 0 0 8 0 7.54979e-8 -1 -8 0 1 7.54979e-8 8.000001 0 0 0 1 1 0 0 0 0 7.54979e-8 -1 0 0 1 7.54979e-8 0 0 0 0 1</float_array>
         <technique_common>
-          <accessor source="#BoxArmatureNode_BoxBone_pose_matrix-output-array" count="2" stride="16">
+          <accessor source="#Armature_Bone_pose_matrix-output-array" count="4" stride="16">
             <param name="TRANSFORM" type="float4x4"/>
           </accessor>
         </technique_common>
       </source>
-      <source id="BoxArmatureNode_BoxBone_pose_matrix-interpolation">
-        <Name_array id="BoxArmatureNode_BoxBone_pose_matrix-interpolation-array" count="2">LINEAR LINEAR</Name_array>
+      <source id="Armature_Bone_pose_matrix-interpolation">
+        <Name_array id="Armature_Bone_pose_matrix-interpolation-array" count="4">LINEAR LINEAR LINEAR LINEAR</Name_array>
         <technique_common>
-          <accessor source="#BoxArmatureNode_BoxBone_pose_matrix-interpolation-array" count="2" stride="1">
+          <accessor source="#Armature_Bone_pose_matrix-interpolation-array" count="4" stride="1">
             <param name="INTERPOLATION" type="name"/>
           </accessor>
         </technique_common>
       </source>
-      <sampler id="BoxArmatureNode_BoxBone_pose_matrix-sampler">
-        <input semantic="INPUT" source="#BoxArmatureNode_BoxBone_pose_matrix-input"/>
-        <input semantic="OUTPUT" source="#BoxArmatureNode_BoxBone_pose_matrix-output"/>
-        <input semantic="INTERPOLATION" source="#BoxArmatureNode_BoxBone_pose_matrix-interpolation"/>
+      <sampler id="Armature_Bone_pose_matrix-sampler">
+        <input semantic="INPUT" source="#Armature_Bone_pose_matrix-input"/>
+        <input semantic="OUTPUT" source="#Armature_Bone_pose_matrix-output"/>
+        <input semantic="INTERPOLATION" source="#Armature_Bone_pose_matrix-interpolation"/>
       </sampler>
-      <channel source="#BoxArmatureNode_BoxBone_pose_matrix-sampler" target="BoxBone/transform"/>
-    </animation>
-    <animation id="BoxArmatureNode_location.X">
-      <source id="BoxArmatureNode_location.X-input">
-        <float_array id="BoxArmatureNode_location.X-input-array" count="2">0 2.5</float_array>
-        <technique_common>
-          <accessor source="#BoxArmatureNode_location.X-input-array" count="2" stride="1">
-            <param name="TIME" type="float"/>
-          </accessor>
-        </technique_common>
-      </source>
-      <source id="BoxArmatureNode_location.X-output">
-        <float_array id="BoxArmatureNode_location.X-output-array" count="2">-4 4</float_array>
-        <technique_common>
-          <accessor source="#BoxArmatureNode_location.X-output-array" count="2" stride="1">
-            <param name="X" type="float"/>
-          </accessor>
-        </technique_common>
-      </source>
-      <source id="BoxArmatureNode_location.X-interpolation">
-        <Name_array id="BoxArmatureNode_location.X-interpolation-array" count="2">BEZIER BEZIER</Name_array>
-        <technique_common>
-          <accessor source="#BoxArmatureNode_location.X-interpolation-array" count="2" stride="1">
-            <param name="INTERPOLATION" type="name"/>
-          </accessor>
-        </technique_common>
-      </source>
-      <source id="BoxArmatureNode_location.X-intangent">
-        <float_array id="BoxArmatureNode_location.X-intangent-array" count="4">-0.967467 -4 1.532533 4</float_array>
-        <technique_common>
-          <accessor source="#BoxArmatureNode_location.X-intangent-array" count="2" stride="2">
-            <param name="X" type="float"/>
-            <param name="Y" type="float"/>
-          </accessor>
-        </technique_common>
-      </source>
-      <source id="BoxArmatureNode_location.X-outtangent">
-        <float_array id="BoxArmatureNode_location.X-outtangent-array" count="4">0.967467 -4 3.467467 4</float_array>
-        <technique_common>
-          <accessor source="#BoxArmatureNode_location.X-outtangent-array" count="2" stride="2">
-            <param name="X" type="float"/>
-            <param name="Y" type="float"/>
-          </accessor>
-        </technique_common>
-      </source>
-      <sampler id="BoxArmatureNode_location.X-sampler">
-        <input semantic="INPUT" source="#BoxArmatureNode_location.X-input"/>
-        <input semantic="OUTPUT" source="#BoxArmatureNode_location.X-output"/>
-        <input semantic="INTERPOLATION" source="#BoxArmatureNode_location.X-interpolation"/>
-        <input semantic="IN_TANGENT" source="#BoxArmatureNode_location.X-intangent"/>
-        <input semantic="OUT_TANGENT" source="#BoxArmatureNode_location.X-outtangent"/>
-      </sampler>
-      <channel source="#BoxArmatureNode_location.X-sampler" target="BoxArmatureNode/location.X"/>
-    </animation>
-    <animation id="BoxArmatureNode_location.Y">
-      <source id="BoxArmatureNode_location.Y-input">
-        <float_array id="BoxArmatureNode_location.Y-input-array" count="2">0 2.5</float_array>
-        <technique_common>
-          <accessor source="#BoxArmatureNode_location.Y-input-array" count="2" stride="1">
-            <param name="TIME" type="float"/>
-          </accessor>
-        </technique_common>
-      </source>
-      <source id="BoxArmatureNode_location.Y-output">
-        <float_array id="BoxArmatureNode_location.Y-output-array" count="2">0 0</float_array>
-        <technique_common>
-          <accessor source="#BoxArmatureNode_location.Y-output-array" count="2" stride="1">
-            <param name="Y" type="float"/>
-          </accessor>
-        </technique_common>
-      </source>
-      <source id="BoxArmatureNode_location.Y-interpolation">
-        <Name_array id="BoxArmatureNode_location.Y-interpolation-array" count="2">BEZIER BEZIER</Name_array>
-        <technique_common>
-          <accessor source="#BoxArmatureNode_location.Y-interpolation-array" count="2" stride="1">
-            <param name="INTERPOLATION" type="name"/>
-          </accessor>
-        </technique_common>
-      </source>
-      <source id="BoxArmatureNode_location.Y-intangent">
-        <float_array id="BoxArmatureNode_location.Y-intangent-array" count="4">-0.9760288 0 1.523971 0</float_array>
-        <technique_common>
-          <accessor source="#BoxArmatureNode_location.Y-intangent-array" count="2" stride="2">
-            <param name="X" type="float"/>
-            <param name="Y" type="float"/>
-          </accessor>
-        </technique_common>
-      </source>
-      <source id="BoxArmatureNode_location.Y-outtangent">
-        <float_array id="BoxArmatureNode_location.Y-outtangent-array" count="4">0.9760288 0 3.476029 0</float_array>
-        <technique_common>
-          <accessor source="#BoxArmatureNode_location.Y-outtangent-array" count="2" stride="2">
-            <param name="X" type="float"/>
-            <param name="Y" type="float"/>
-          </accessor>
-        </technique_common>
-      </source>
-      <sampler id="BoxArmatureNode_location.Y-sampler">
-        <input semantic="INPUT" source="#BoxArmatureNode_location.Y-input"/>
-        <input semantic="OUTPUT" source="#BoxArmatureNode_location.Y-output"/>
-        <input semantic="INTERPOLATION" source="#BoxArmatureNode_location.Y-interpolation"/>
-        <input semantic="IN_TANGENT" source="#BoxArmatureNode_location.Y-intangent"/>
-        <input semantic="OUT_TANGENT" source="#BoxArmatureNode_location.Y-outtangent"/>
-      </sampler>
-      <channel source="#BoxArmatureNode_location.Y-sampler" target="BoxArmatureNode/location.Y"/>
-    </animation>
-    <animation id="BoxArmatureNode_location.Z">
-      <source id="BoxArmatureNode_location.Z-input">
-        <float_array id="BoxArmatureNode_location.Z-input-array" count="2">0 2.5</float_array>
-        <technique_common>
-          <accessor source="#BoxArmatureNode_location.Z-input-array" count="2" stride="1">
-            <param name="TIME" type="float"/>
-          </accessor>
-        </technique_common>
-      </source>
-      <source id="BoxArmatureNode_location.Z-output">
-        <float_array id="BoxArmatureNode_location.Z-output-array" count="2">0 0</float_array>
-        <technique_common>
-          <accessor source="#BoxArmatureNode_location.Z-output-array" count="2" stride="1">
-            <param name="Z" type="float"/>
-          </accessor>
-        </technique_common>
-      </source>
-      <source id="BoxArmatureNode_location.Z-interpolation">
-        <Name_array id="BoxArmatureNode_location.Z-interpolation-array" count="2">BEZIER BEZIER</Name_array>
-        <technique_common>
-          <accessor source="#BoxArmatureNode_location.Z-interpolation-array" count="2" stride="1">
-            <param name="INTERPOLATION" type="name"/>
-          </accessor>
-        </technique_common>
-      </source>
-      <source id="BoxArmatureNode_location.Z-intangent">
-        <float_array id="BoxArmatureNode_location.Z-intangent-array" count="4">-0.9760288 0 1.523971 0</float_array>
-        <technique_common>
-          <accessor source="#BoxArmatureNode_location.Z-intangent-array" count="2" stride="2">
-            <param name="X" type="float"/>
-            <param name="Y" type="float"/>
-          </accessor>
-        </technique_common>
-      </source>
-      <source id="BoxArmatureNode_location.Z-outtangent">
-        <float_array id="BoxArmatureNode_location.Z-outtangent-array" count="4">0.9760288 0 3.476029 0</float_array>
-        <technique_common>
-          <accessor source="#BoxArmatureNode_location.Z-outtangent-array" count="2" stride="2">
-            <param name="X" type="float"/>
-            <param name="Y" type="float"/>
-          </accessor>
-        </technique_common>
-      </source>
-      <sampler id="BoxArmatureNode_location.Z-sampler">
-        <input semantic="INPUT" source="#BoxArmatureNode_location.Z-input"/>
-        <input semantic="OUTPUT" source="#BoxArmatureNode_location.Z-output"/>
-        <input semantic="INTERPOLATION" source="#BoxArmatureNode_location.Z-interpolation"/>
-        <input semantic="IN_TANGENT" source="#BoxArmatureNode_location.Z-intangent"/>
-        <input semantic="OUT_TANGENT" source="#BoxArmatureNode_location.Z-outtangent"/>
-      </sampler>
-      <channel source="#BoxArmatureNode_location.Z-sampler" target="BoxArmatureNode/location.Z"/>
-    </animation>
-    <animation id="BoxArmatureNode_rotation_euler.X">
-      <source id="BoxArmatureNode_rotation_euler.X-input">
-        <float_array id="BoxArmatureNode_rotation_euler.X-input-array" count="2">0 2.5</float_array>
-        <technique_common>
-          <accessor source="#BoxArmatureNode_rotation_euler.X-input-array" count="2" stride="1">
-            <param name="TIME" type="float"/>
-          </accessor>
-        </technique_common>
-      </source>
-      <source id="BoxArmatureNode_rotation_euler.X-output">
-        <float_array id="BoxArmatureNode_rotation_euler.X-output-array" count="2">0 0</float_array>
-        <technique_common>
-          <accessor source="#BoxArmatureNode_rotation_euler.X-output-array" count="2" stride="1">
-            <param name="ANGLE" type="float"/>
-          </accessor>
-        </technique_common>
-      </source>
-      <source id="BoxArmatureNode_rotation_euler.X-interpolation">
-        <Name_array id="BoxArmatureNode_rotation_euler.X-interpolation-array" count="2">BEZIER BEZIER</Name_array>
-        <technique_common>
-          <accessor source="#BoxArmatureNode_rotation_euler.X-interpolation-array" count="2" stride="1">
-            <param name="INTERPOLATION" type="name"/>
-          </accessor>
-        </technique_common>
-      </source>
-      <source id="BoxArmatureNode_rotation_euler.X-intangent">
-        <float_array id="BoxArmatureNode_rotation_euler.X-intangent-array" count="4">-0.9760288 0 1.523971 0</float_array>
-        <technique_common>
-          <accessor source="#BoxArmatureNode_rotation_euler.X-intangent-array" count="2" stride="2">
-            <param name="X" type="float"/>
-            <param name="Y" type="float"/>
-          </accessor>
-        </technique_common>
-      </source>
-      <source id="BoxArmatureNode_rotation_euler.X-outtangent">
-        <float_array id="BoxArmatureNode_rotation_euler.X-outtangent-array" count="4">0.9760288 0 3.476029 0</float_array>
-        <technique_common>
-          <accessor source="#BoxArmatureNode_rotation_euler.X-outtangent-array" count="2" stride="2">
-            <param name="X" type="float"/>
-            <param name="Y" type="float"/>
-          </accessor>
-        </technique_common>
-      </source>
-      <sampler id="BoxArmatureNode_rotation_euler.X-sampler">
-        <input semantic="INPUT" source="#BoxArmatureNode_rotation_euler.X-input"/>
-        <input semantic="OUTPUT" source="#BoxArmatureNode_rotation_euler.X-output"/>
-        <input semantic="INTERPOLATION" source="#BoxArmatureNode_rotation_euler.X-interpolation"/>
-        <input semantic="IN_TANGENT" source="#BoxArmatureNode_rotation_euler.X-intangent"/>
-        <input semantic="OUT_TANGENT" source="#BoxArmatureNode_rotation_euler.X-outtangent"/>
-      </sampler>
-      <channel source="#BoxArmatureNode_rotation_euler.X-sampler" target="BoxArmatureNode/rotationX.ANGLE"/>
-    </animation>
-    <animation id="BoxArmatureNode_rotation_euler.Y">
-      <source id="BoxArmatureNode_rotation_euler.Y-input">
-        <float_array id="BoxArmatureNode_rotation_euler.Y-input-array" count="2">0 2.5</float_array>
-        <technique_common>
-          <accessor source="#BoxArmatureNode_rotation_euler.Y-input-array" count="2" stride="1">
-            <param name="TIME" type="float"/>
-          </accessor>
-        </technique_common>
-      </source>
-      <source id="BoxArmatureNode_rotation_euler.Y-output">
-        <float_array id="BoxArmatureNode_rotation_euler.Y-output-array" count="2">0 0</float_array>
-        <technique_common>
-          <accessor source="#BoxArmatureNode_rotation_euler.Y-output-array" count="2" stride="1">
-            <param name="ANGLE" type="float"/>
-          </accessor>
-        </technique_common>
-      </source>
-      <source id="BoxArmatureNode_rotation_euler.Y-interpolation">
-        <Name_array id="BoxArmatureNode_rotation_euler.Y-interpolation-array" count="2">BEZIER BEZIER</Name_array>
-        <technique_common>
-          <accessor source="#BoxArmatureNode_rotation_euler.Y-interpolation-array" count="2" stride="1">
-            <param name="INTERPOLATION" type="name"/>
-          </accessor>
-        </technique_common>
-      </source>
-      <source id="BoxArmatureNode_rotation_euler.Y-intangent">
-        <float_array id="BoxArmatureNode_rotation_euler.Y-intangent-array" count="4">-0.9760288 0 1.523971 0</float_array>
-        <technique_common>
-          <accessor source="#BoxArmatureNode_rotation_euler.Y-intangent-array" count="2" stride="2">
-            <param name="X" type="float"/>
-            <param name="Y" type="float"/>
-          </accessor>
-        </technique_common>
-      </source>
-      <source id="BoxArmatureNode_rotation_euler.Y-outtangent">
-        <float_array id="BoxArmatureNode_rotation_euler.Y-outtangent-array" count="4">0.9760288 0 3.476029 0</float_array>
-        <technique_common>
-          <accessor source="#BoxArmatureNode_rotation_euler.Y-outtangent-array" count="2" stride="2">
-            <param name="X" type="float"/>
-            <param name="Y" type="float"/>
-          </accessor>
-        </technique_common>
-      </source>
-      <sampler id="BoxArmatureNode_rotation_euler.Y-sampler">
-        <input semantic="INPUT" source="#BoxArmatureNode_rotation_euler.Y-input"/>
-        <input semantic="OUTPUT" source="#BoxArmatureNode_rotation_euler.Y-output"/>
-        <input semantic="INTERPOLATION" source="#BoxArmatureNode_rotation_euler.Y-interpolation"/>
-        <input semantic="IN_TANGENT" source="#BoxArmatureNode_rotation_euler.Y-intangent"/>
-        <input semantic="OUT_TANGENT" source="#BoxArmatureNode_rotation_euler.Y-outtangent"/>
-      </sampler>
-      <channel source="#BoxArmatureNode_rotation_euler.Y-sampler" target="BoxArmatureNode/rotationY.ANGLE"/>
-    </animation>
-    <animation id="BoxArmatureNode_rotation_euler.Z">
-      <source id="BoxArmatureNode_rotation_euler.Z-input">
-        <float_array id="BoxArmatureNode_rotation_euler.Z-input-array" count="2">0 2.5</float_array>
-        <technique_common>
-          <accessor source="#BoxArmatureNode_rotation_euler.Z-input-array" count="2" stride="1">
-            <param name="TIME" type="float"/>
-          </accessor>
-        </technique_common>
-      </source>
-      <source id="BoxArmatureNode_rotation_euler.Z-output">
-        <float_array id="BoxArmatureNode_rotation_euler.Z-output-array" count="2">0 0</float_array>
-        <technique_common>
-          <accessor source="#BoxArmatureNode_rotation_euler.Z-output-array" count="2" stride="1">
-            <param name="ANGLE" type="float"/>
-          </accessor>
-        </technique_common>
-      </source>
-      <source id="BoxArmatureNode_rotation_euler.Z-interpolation">
-        <Name_array id="BoxArmatureNode_rotation_euler.Z-interpolation-array" count="2">BEZIER BEZIER</Name_array>
-        <technique_common>
-          <accessor source="#BoxArmatureNode_rotation_euler.Z-interpolation-array" count="2" stride="1">
-            <param name="INTERPOLATION" type="name"/>
-          </accessor>
-        </technique_common>
-      </source>
-      <source id="BoxArmatureNode_rotation_euler.Z-intangent">
-        <float_array id="BoxArmatureNode_rotation_euler.Z-intangent-array" count="4">-0.9760288 0 1.523971 0</float_array>
-        <technique_common>
-          <accessor source="#BoxArmatureNode_rotation_euler.Z-intangent-array" count="2" stride="2">
-            <param name="X" type="float"/>
-            <param name="Y" type="float"/>
-          </accessor>
-        </technique_common>
-      </source>
-      <source id="BoxArmatureNode_rotation_euler.Z-outtangent">
-        <float_array id="BoxArmatureNode_rotation_euler.Z-outtangent-array" count="4">0.9760288 0 3.476029 0</float_array>
-        <technique_common>
-          <accessor source="#BoxArmatureNode_rotation_euler.Z-outtangent-array" count="2" stride="2">
-            <param name="X" type="float"/>
-            <param name="Y" type="float"/>
-          </accessor>
-        </technique_common>
-      </source>
-      <sampler id="BoxArmatureNode_rotation_euler.Z-sampler">
-        <input semantic="INPUT" source="#BoxArmatureNode_rotation_euler.Z-input"/>
-        <input semantic="OUTPUT" source="#BoxArmatureNode_rotation_euler.Z-output"/>
-        <input semantic="INTERPOLATION" source="#BoxArmatureNode_rotation_euler.Z-interpolation"/>
-        <input semantic="IN_TANGENT" source="#BoxArmatureNode_rotation_euler.Z-intangent"/>
-        <input semantic="OUT_TANGENT" source="#BoxArmatureNode_rotation_euler.Z-outtangent"/>
-      </sampler>
-      <channel source="#BoxArmatureNode_rotation_euler.Z-sampler" target="BoxArmatureNode/rotationZ.ANGLE"/>
+      <channel source="#Armature_Bone_pose_matrix-sampler" target="Bone/transform"/>
     </animation>
   </library_animations>
   <library_controllers>
-    <controller id="BoxArmatureNode_Cube-skin" name="BoxArmatureNode">
+    <controller id="Armature_Cube-skin" name="Armature">
       <skin source="#Cube-mesh">
-        <bind_shape_matrix>1 0 0 -4 0 1 0 0 0 0 1 0 0 0 0 1</bind_shape_matrix>
-        <source id="BoxArmatureNode_Cube-skin-joints">
-          <Name_array id="BoxArmatureNode_Cube-skin-joints-array" count="1">BoxBone</Name_array>
+        <bind_shape_matrix>1 0 0 0 0 1 0 0 0 0 1 -0.01541965 0 0 0 1</bind_shape_matrix>
+        <source id="Armature_Cube-skin-joints">
+          <Name_array id="Armature_Cube-skin-joints-array" count="1">Bone</Name_array>
           <technique_common>
-            <accessor source="#BoxArmatureNode_Cube-skin-joints-array" count="1" stride="1">
+            <accessor source="#Armature_Cube-skin-joints-array" count="1" stride="1">
               <param name="JOINT" type="name"/>
             </accessor>
           </technique_common>
         </source>
-        <source id="BoxArmatureNode_Cube-skin-bind_poses">
-          <float_array id="BoxArmatureNode_Cube-skin-bind_poses-array" count="16">1 0 0 4 0 0 1 0 0 -1 0 0 0 0 0 1</float_array>
+        <source id="Armature_Cube-skin-bind_poses">
+          <float_array id="Armature_Cube-skin-bind_poses-array" count="16">1 0 0 0 0 0 1 0 0 -1 0 0 0 0 0 1</float_array>
           <technique_common>
-            <accessor source="#BoxArmatureNode_Cube-skin-bind_poses-array" count="1" stride="16">
+            <accessor source="#Armature_Cube-skin-bind_poses-array" count="1" stride="16">
               <param name="TRANSFORM" type="float4x4"/>
             </accessor>
           </technique_common>
         </source>
-        <source id="BoxArmatureNode_Cube-skin-weights">
-          <float_array id="BoxArmatureNode_Cube-skin-weights-array" count="8">1 1 1 1 1 1 1 1</float_array>
+        <source id="Armature_Cube-skin-weights">
+          <float_array id="Armature_Cube-skin-weights-array" count="8">1 1 1 1 1 1 1 1</float_array>
           <technique_common>
-            <accessor source="#BoxArmatureNode_Cube-skin-weights-array" count="8" stride="1">
+            <accessor source="#Armature_Cube-skin-weights-array" count="8" stride="1">
               <param name="WEIGHT" type="float"/>
             </accessor>
           </technique_common>
         </source>
         <joints>
-          <input semantic="JOINT" source="#BoxArmatureNode_Cube-skin-joints"/>
-          <input semantic="INV_BIND_MATRIX" source="#BoxArmatureNode_Cube-skin-bind_poses"/>
+          <input semantic="JOINT" source="#Armature_Cube-skin-joints"/>
+          <input semantic="INV_BIND_MATRIX" source="#Armature_Cube-skin-bind_poses"/>
         </joints>
         <vertex_weights count="8">
-          <input semantic="JOINT" source="#BoxArmatureNode_Cube-skin-joints" offset="0"/>
-          <input semantic="WEIGHT" source="#BoxArmatureNode_Cube-skin-weights" offset="1"/>
+          <input semantic="JOINT" source="#Armature_Cube-skin-joints" offset="0"/>
+          <input semantic="WEIGHT" source="#Armature_Cube-skin-weights" offset="1"/>
           <vcount>1 1 1 1 1 1 1 1 </vcount>
           <v>0 0 0 1 0 2 0 3 0 4 0 5 0 6 0 7</v>
         </vertex_weights>
@@ -576,13 +264,13 @@
         <scale sid="scale">1 1 1</scale>
         <instance_light url="#Lamp-light"/>
       </node>
-      <node id="BoxArmatureNode" name="BoxArmatureNode" type="NODE">
-        <translate sid="location">-4 0 0</translate>
+      <node id="Armature" name="Armature" type="NODE">
+        <translate sid="location">0 0 0</translate>
         <rotate sid="rotationZ">0 0 1 0</rotate>
         <rotate sid="rotationY">0 1 0 0</rotate>
         <rotate sid="rotationX">1 0 0 0</rotate>
         <scale sid="scale">1 1 1</scale>
-        <node id="BoxBone" name="BoxBone" sid="BoxBone" type="JOINT">
+        <node id="Bone" name="Bone" sid="Bone" type="JOINT">
           <matrix sid="transform">1 0 0 0 0 7.54979e-8 -1 0 0 1 7.54979e-8 0 0 0 0 1</matrix>
         </node>
       </node>
@@ -592,24 +280,14 @@
         <rotate sid="rotationY">0 1 0 0</rotate>
         <rotate sid="rotationX">1 0 0 0</rotate>
         <scale sid="scale">1 1 1</scale>
-        <instance_controller url="#BoxArmatureNode_Cube-skin">
-          <skeleton>#BoxBone</skeleton>
+        <instance_controller url="#Armature_Cube-skin">
+          <skeleton>#Bone</skeleton>
           <bind_material>
             <technique_common>
               <instance_material symbol="Material-material" target="#Material-material"/>
             </technique_common>
           </bind_material>
         </instance_controller>
-      </node>
-      <node id="WorldArmatureNode" name="WorldArmatureNode" type="NODE">
-        <translate sid="location">0 0 0</translate>
-        <rotate sid="rotationZ">0 0 1 0</rotate>
-        <rotate sid="rotationY">0 1 0 0</rotate>
-        <rotate sid="rotationX">1 0 0 0</rotate>
-        <scale sid="scale">1 1 1</scale>
-        <node id="WorldBone" name="WorldBone" sid="WorldBone" type="JOINT">
-          <matrix sid="transform">1 0 0 0 0 7.54979e-8 -1 0 0 1 7.54979e-8 0 0 0 0 1</matrix>
-        </node>
       </node>
     </visual_scene>
   </library_visual_scenes>
